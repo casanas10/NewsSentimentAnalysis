@@ -55,10 +55,6 @@ def get_apple_news_data(data_df):
 
         return apple_news_df
 
-def cleanup_date_format(x):
-    print(x)
-
-
 if __name__ == "__main__":
 
     if not os.path.exists('data/newspickle.pkl'):
@@ -84,14 +80,4 @@ if __name__ == "__main__":
 
         all_data_df.to_pickle("./data/newspickle.pkl")
 
-
-    all_data_df = pd.read_pickle("./data/newspickle.pkl")
-
-    apple_news_df = pd.read_pickle("./data/apple_news.pkl")
-
-    apple_news = apple_news_df['Date'].apply(lambda x: cleanup_date_format(x))
-            # for line in headlines[0:5]:
-    #     print(line)
-        # doc = nlp('European authorities fined Google a record $5.1 billion on Wednesday for abusing its power in the mobile phone market and ordered the company to alter its practices')
-        # print([(X.text, X.label_) for X in doc.ents])
 
