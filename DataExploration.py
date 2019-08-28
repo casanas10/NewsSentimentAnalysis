@@ -53,7 +53,7 @@ def get_apple_news_data(data_df):
                         apple_news_df.loc[i] = row
                         break
 
-        apple_news_df.to_pickle("./data/apple_news.pkl")
+        return apple_news_df
 
 def cleanup_date_format(x):
     print(x)
